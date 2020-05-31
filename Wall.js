@@ -22,7 +22,7 @@ function addComment(comment) {
   return false;
   }
   
-  
+
 fetch("https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall", {
   method: "POST",
   body: JSON.stringify({message: ""})
