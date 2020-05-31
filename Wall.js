@@ -15,7 +15,7 @@ function addComment(comment) {
   let li = document.createElement("li");
   document.getElementById("list").appendChild(li);
 
-  li.innerHTML += comment.value;
+  li.innertext += comment.value;
   return false;
   }
  
