@@ -1,7 +1,4 @@
-
-const theWallList = fetch("https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall");
-
-theWallList.then(response => response.json()).then(data => addElements(data));
+fetch("https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall").then(response => response.json()).then(data => addElements(data));
 
 
 function addElements(list){
@@ -21,21 +18,23 @@ function addComment(comment) {
   li.innerHTML += comment.value;
   return false;
   }
-  
+ 
+
+/*
+function addComment()
+  let newlistItem = getElementById("li");
 
 fetch("https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall", {
   method: "POST",
-  body: JSON.stringify({message: ""})
+  body: JSON.stringify({message: newlistItem})
 }).then(function (response) {
   if (response.status == 200) {
     console.log("Ok!")
   } else {console.log("Oh no!")}
-})
+});
 
-fetch('https://2ubiyjczwh.execute-api.eu-west-2.amazonaws.com/wall').then(response => response.json()).then(data => console.log(data))
+letCurrentList = document.getElementById("list").lastElementChild;
+let newComment = document.createElement("li");
+newComment.innerText = addComment;
 
-if (localStorage.getItem("test") == "key") {
-  console.log("It's there!")
-} else {
-  localStorage.setItem("test", "key")
-}
+*/
